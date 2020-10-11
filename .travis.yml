@@ -8,5 +8,6 @@ script:
 - docker --version
 - make build
 - (make start >> start.out ; touch end.end) &
+- cp ../waitEnd.sh waitEnd.sh
 - chmod +x waitEnd.sh
 - ./waitEnd.sh
