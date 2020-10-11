@@ -7,5 +7,7 @@ script:
 - cd flan
 - docker --version
 - make build
-- chmod =rwx ./run.sh
-- ./run.sh
+- travis_wait 60 make start >> start.out
+- tail -500 start.out
+- travis_wait 60 make html >> html.out
+- tail -500 html.out
