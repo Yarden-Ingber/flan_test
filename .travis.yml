@@ -7,6 +7,4 @@ script:
 - cd flan
 - docker --version
 - make build
-- chmod +x ./run.sh
-- ./run.sh
-- make html
+- make start
