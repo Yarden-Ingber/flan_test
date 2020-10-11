@@ -1,15 +1,16 @@
-!/bin/bash
+#!/bin/bash
 # Abort on Error
 set -e
 
 export PING_SLEEP=30s
-export BUILD_OUTPUT=build.out
+export WORKDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export BUILD_OUTPUT=$WORKDIR/build.out
 
 touch $BUILD_OUTPUT
 
 dump_output() {
    echo Tailing the last 500 lines of output:
-   tail -500 $BUILD_OUTPUT
+   tail -500 $BUILD_OUTPUT  
 }
 error_handler() {
   echo ERROR: An error was encountered with the build.
