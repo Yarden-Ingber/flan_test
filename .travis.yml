@@ -3,6 +3,7 @@ services:
   
 script:
 - git clone https://github.com/cloudflare/flan.git
+- cat ./flan/shared/ips.txt
 - cp ips.txt flan/shared/ips.txt
 - cat ./flan/shared/ips.txt
 - ls
