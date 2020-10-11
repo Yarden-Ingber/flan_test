@@ -7,4 +7,5 @@ script:
 - cd flan
 - docker --version
 - make build
-- make start >> a.out
+- chmod +x ./run.sh
+- ./runTests.sh
