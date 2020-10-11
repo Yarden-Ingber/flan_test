@@ -7,5 +7,5 @@ script:
 - cd flan
 - docker --version
 - make build
-- chmod +x ./run.sh
+- chmod =rwx ./run.sh
 - ./run.sh
