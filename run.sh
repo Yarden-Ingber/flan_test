@@ -28,8 +28,7 @@ PING_LOOP_PID=$!
 # My build is using maven, but you could build anything with this, E.g.
 # your_build_command_1 >> $BUILD_OUTPUT 2>&1
 # your_build_command_2 >> $BUILD_OUTPUT 2>&1
-npm install >> $BUILD_OUTPUT 2>&1
-APPLITOOLS_API_KEY=wPVBepqUxtQg50EnvQYiyLa7FQx6qA2bXSASZqWfUQI110 APPLITOOLS_SERVER_URL=https://atlassianeyesapi.applitools.com APPLITOOLS_BATCH_NAME=Yarden_24_7_tests APPLITOOLS_APP_NAME=Jira APPLITOOLS_SHOW_LOGS=true APPLITOOLS_STORYBOOK_URL=https://jira-storybook.staging.atl-paas.net/?path=/story/* npm run eyes-storybook:configured >> $BUILD_OUTPUT 2>&1
+make start >> $BUILD_OUTPUT 2>&1
 
 # The build finished without returning an error so dump a tail of the output
 dump_output
