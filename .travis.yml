@@ -7,7 +7,6 @@ script:
 - cd flan
 - docker --version
 - make build
-- travis_wait 60 make start >> start.out
-- tail -500 start.out
-- travis_wait 60 make html >> html.out
-- tail -500 html.out
+- (make start >> start.out ; touch end.end) &
+- chmod +x waitEnd.sh
+- ./waitEnd.sh
