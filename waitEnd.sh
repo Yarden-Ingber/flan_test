@@ -1,5 +1,5 @@
 #!/bin/bash 
 while [[ ! -f end.end ]]; do
-    echo ".\n"
-    sleep 3
+    echo $(date)
+    sleep 300
 done
