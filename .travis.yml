@@ -4,6 +4,7 @@ services:
 script:
 - git clone https://github.com/cloudflare/flan.git
 - cp ips.txt flan/shared/ips.txt
+- cat ./flan/shared/ips.txt
 - ls
 - cd flan
 - docker --version
