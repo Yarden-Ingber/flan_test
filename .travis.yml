@@ -3,3 +3,4 @@ services:
   
 script:
 - git clone https://github.com/cloudflare/flan.git
+- ls
